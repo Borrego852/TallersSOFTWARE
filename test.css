@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3eafc 0%, #b7e0c7 100%);
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    transition: background 0.4s;
+}
+body.dark-mode {
+    background: #181c1f;
+    background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80');
+    color: #e3eafc;
+}
+.test-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: background 0.4s, color 0.4s;
+}
+.dark-mode .test-container {
+    background: rgba(34, 40, 49, 0.95);
+    color: #e3eafc;
+}
+h1 {
+    color: #2d3a4b;
+}
+.dark-mode h1 {
+    color: #e3eafc;
+}
+#progress-bar-container {
+    width: 100%;
+    background: #dbeafe;
+    border-radius: 8px;
+    height: 18px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: background 0.4s;
+}
+.dark-mode #progress-bar-container {
+    background: #2d3a4b;
+}
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4f8cff, #38b6ff);
+    border-radius: 8px;
+    transition: width 0.3s;
+}
+.dark-mode #progress-bar {
+    background: linear-gradient(90deg, #38b6ff, #4f8cff);
+}
+#question {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: #333;
+}
+.dark-mode #question {
+    color: #e3eafc;
+}
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+.option-btn {
+    padding: 0.7rem 1rem;
+    background: #f1f5fb;
+    border: 1px solid #b6c6e3;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s, border 0.2s;
+}
+.option-btn.selected, .option-btn:hover {
+    background: #4f8cff;
+    color: #fff;
+    border: 1px solid #4f8cff;
+}
+#options .option-btn {
+    transition: background 0.2s, color 0.2s;
+}
+.dark-mode .option-btn {
+    background: #222831;
+    color: #e3eafc;
+    border: 1px solid #4f8cff;
+}
+.dark-mode .option-btn.selected, .dark-mode .option-btn:hover {
+    background: #38b6ff;
+    color: #222831;
+    border: 1px solid #38b6ff;
+}
+#next-btn {
+    padding: 0.6rem 1.5rem;
+    background: #38b6ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+#next-btn:disabled {
+    background: #b6c6e3;
+    cursor: not-allowed;
+}
+#result {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #2d3a4b;
+    background: #e0f7fa;
+    padding: 1.2rem;
+    border-radius: 8px;
+    transition: background 0.4s, color 0.4s;
+}
+.dark-mode #result {
+    background: #222831;
+    color: #e3eafc;
+}
+.result-img {
+    max-width: 120px;
+    margin: 0 auto 1rem auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+.result-actions button {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    background: #4f8cff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.result-actions button:hover {
+    background: #38b6ff;
+}
+.dark-mode .result-actions button {
+    background: #38b6ff;
+    color: #222831;
+}
+.dark-mode .result-actions button:hover {
+    background: #4f8cff;
+    color: #fff;
+}
+.toggle-mode-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+    z-index: 10;
+}
+.toggle-mode-btn:hover {
+    background: #38b6ff;
+}
